@@ -1,0 +1,106 @@
+15:33:54 INFO ast.sap.connector.main.MainApp[48]: Conector SAP version 1.1.1902.1 
+15:34:13 INFO ast.sap.connector.main.MainApp[51]: Comando ejecutado: -j Z_PRUEBA_2 -c CREATE_MONITOR_JOB -t /AFIL/O_DATANET_S -i 11045400 
+15:34:13 INFO ast.sap.connector.main.MainApp[53]: Iniciando el componente conector sap 
+15:34:13 DEBUG ast.sap.connector.main.MainApp[54]: java.library.path-------------------------------------------------------------------------------------------------------------- 
+15:34:13 DEBUG ast.sap.connector.main.MainApp[56]: C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_151\jre\bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/lib/amd64;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Data Protection\Drivers\TSS\bin\;C:\Program Files\PostgreSQL\9.6\bin;C:\Program Files\PostgreSQL\9.6\lib;C:\WINDOWS\System32\OpenSSH\;C:\HashiCorp\Vagrant\bin;C:\Program Files\Java\jdk1.8.0_151\bin;C:\apache-maven-3.6.0\bin;C:\xampp\mysql\bin;C:\Users\Christian Gutierrez\AppData\Local\Microsoft\WindowsApps;C:\adb;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\bin\;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Christian Gutierrez\Desktop;;. 
+15:34:13 DEBUG ast.sap.connector.main.MainApp[57]: ------------------------------------------------------------------------------------------------------------------------------- 
+15:34:13 INFO ast.sap.connector.config.Configuration[37]: Cargando configuraciones desde C:\Users\Christian Gutierrez\Documents\services\sap-connector\connectorsap.properties 
+15:34:27 INFO ast.sap.connector.main.MainApp[101]: Encriptacion de passwords habilitada. 
+15:34:27 DEBUG ast.sap.connector.main.MainApp[120]: DATOS DE ENTRADA FINALES: 
+15:34:27 DEBUG ast.sap.connector.main.MainApp[121]: InputArgumentsData [user=mt14763809, password=****, host=10.233.0.131, clientNumber=401, systemNumber=00, jobName=Z_PRUEBA_2, jobId=11045400, command=CREATE_MONITOR_JOB, language=EN, execServer=null, eventId=null, singleStep=/AFIL/O_DATANET_S, singleVariant=null, variantKeyValuePairs=[]] 
+15:34:27 INFO ast.sap.connector.main.MainApp[129]: CONSTRUYENDO CONFIGURACION DE DESTINO SAP secureDestination 
+15:39:14 DEBUG ast.sap.connector.job.track.JobMonitor[68]: Monitoreando job 
+15:39:15 DEBUG ast.sap.connector.job.track.JobTracker[50]: Obteniendo status de job 16364400 - Z_PRUEBA_2 
+15:39:16 DEBUG ast.sap.connector.job.track.JobTracker[62]: Estado de job: F ; retorno: | 
+15:39:16 DEBUG ast.sap.connector.job.track.JobMonitor[79]: statusCode: Finished 
+15:42:49 DEBUG ast.sap.connector.main.MainApp[144]: RESULTADO DEL COMANDO: SapCommandResult [
+ ret=Optional.of(SapBapiret2 [type=E, id=XM, number=60, message=A job log does not (yet) exist, logNo=, logMsgNo=0, messagev1=, messagev2=, messagev3=, messagev4=, parameter=, row=0, field=, system=PIN_401]),
+ statusCode=Optional.of(F - Finished),
+ logEntries=Optional.of([]),
+ jobCount=Optional.absent(),
+ message=Optional.absent(),
+ bapiXmJob= Optional.absent(),
+ bp20job= Optional.absent(),
+ logId= Optional.absent(),
+ ProcessEntries= Optional.absent(),
+ chainStatus= Optional.absent(),
+ ProcessLogPairs= Optional.absent(),
+ ChainLogEntries= Optional.absent()
+] 
+15:43:04 DEBUG ast.sap.connector.main.MainApp[200]: OutputError: OutputError [code=0, trueCode=0, message=No existe un log] 
+15:45:00 INFO ast.sap.connector.main.MainApp[48]: Conector SAP version 1.1.1902.1 
+15:45:00 INFO ast.sap.connector.main.MainApp[51]: Comando ejecutado: -j Z_PRUEBA_2 -c CREATE_MONITOR_JOB -t /AFIL/O_DATANET_S -i 11045400 
+15:45:00 INFO ast.sap.connector.main.MainApp[53]: Iniciando el componente conector sap 
+15:45:00 DEBUG ast.sap.connector.main.MainApp[54]: java.library.path-------------------------------------------------------------------------------------------------------------- 
+15:45:00 DEBUG ast.sap.connector.main.MainApp[56]: C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/lib/amd64;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Data Protection\Drivers\TSS\bin\;C:\Program Files\PostgreSQL\9.6\bin;C:\Program Files\PostgreSQL\9.6\lib;C:\WINDOWS\System32\OpenSSH\;C:\HashiCorp\Vagrant\bin;C:\Program Files\Java\jdk1.8.0_151\bin;C:\apache-maven-3.6.0\bin;C:\xampp\mysql\bin;C:\Users\Christian Gutierrez\AppData\Local\Microsoft\WindowsApps;C:\adb;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\bin\;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Christian Gutierrez\Desktop;;. 
+15:45:00 DEBUG ast.sap.connector.main.MainApp[57]: ------------------------------------------------------------------------------------------------------------------------------- 
+15:45:00 INFO ast.sap.connector.config.Configuration[37]: Cargando configuraciones desde C:\Users\Christian Gutierrez\Documents\services\sap-connector\connectorsap.properties 
+15:45:00 INFO ast.sap.connector.main.MainApp[101]: Encriptacion de passwords habilitada. 
+15:45:00 DEBUG ast.sap.connector.main.MainApp[120]: DATOS DE ENTRADA FINALES: 
+15:45:00 DEBUG ast.sap.connector.main.MainApp[121]: InputArgumentsData [user=mt14763809, password=****, host=10.233.0.131, clientNumber=401, systemNumber=00, jobName=Z_PRUEBA_2, jobId=11045400, command=CREATE_MONITOR_JOB, language=EN, execServer=null, eventId=null, singleStep=/AFIL/O_DATANET_S, singleVariant=null, variantKeyValuePairs=[]] 
+15:45:00 INFO ast.sap.connector.main.MainApp[129]: CONSTRUYENDO CONFIGURACION DE DESTINO SAP secureDestination 
+15:45:18 DEBUG ast.sap.connector.main.MainApp[144]: RESULTADO DEL COMANDO: null 
+15:45:18 ERROR ast.sap.connector.main.MainApp[191]: Error fatal 
+java.lang.NullPointerException: null
+	at ast.sap.connector.main.OutputParser.parseOutput(OutputParser.java:34)
+	at ast.sap.connector.main.MainApp.main(MainApp.java:149)
+15:45:18 DEBUG ast.sap.connector.main.MainApp[200]: OutputError: OutputError [code=255, trueCode=255, message=java.lang.NullPointerException] 
+16:01:23 INFO ast.sap.connector.main.MainApp[48]: Conector SAP version 1.1.1902.1 
+16:01:26 INFO ast.sap.connector.main.MainApp[51]: Comando ejecutado: -j Z_PRUEBA_2 -c CREATE_MONITOR_JOB -t /AFIL/O_DATANET_S -i 11045400 
+16:01:26 INFO ast.sap.connector.main.MainApp[53]: Iniciando el componente conector sap 
+16:01:26 DEBUG ast.sap.connector.main.MainApp[54]: java.library.path-------------------------------------------------------------------------------------------------------------- 
+16:01:26 DEBUG ast.sap.connector.main.MainApp[56]: C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_151\jre\bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/lib/amd64;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Data Protection\Drivers\TSS\bin\;C:\Program Files\PostgreSQL\9.6\bin;C:\Program Files\PostgreSQL\9.6\lib;C:\WINDOWS\System32\OpenSSH\;C:\HashiCorp\Vagrant\bin;C:\Program Files\Java\jdk1.8.0_151\bin;C:\apache-maven-3.6.0\bin;C:\xampp\mysql\bin;C:\Users\Christian Gutierrez\AppData\Local\Microsoft\WindowsApps;C:\adb;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\bin\;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Christian Gutierrez\Desktop;;. 
+16:01:26 DEBUG ast.sap.connector.main.MainApp[57]: ------------------------------------------------------------------------------------------------------------------------------- 
+16:01:26 INFO ast.sap.connector.config.Configuration[37]: Cargando configuraciones desde C:\Users\Christian Gutierrez\Documents\services\sap-connector\connectorsap.properties 
+16:01:34 INFO ast.sap.connector.main.MainApp[101]: Encriptacion de passwords habilitada. 
+16:01:34 DEBUG ast.sap.connector.main.MainApp[120]: DATOS DE ENTRADA FINALES: 
+16:01:34 DEBUG ast.sap.connector.main.MainApp[121]: InputArgumentsData [user=mt14763809, password=****, host=10.233.0.131, clientNumber=401, systemNumber=00, jobName=Z_PRUEBA_2, jobId=11045400, command=CREATE_MONITOR_JOB, language=EN, execServer=null, eventId=null, singleStep=/AFIL/O_DATANET_S, singleVariant=null, variantKeyValuePairs=[]] 
+16:01:34 INFO ast.sap.connector.main.MainApp[129]: CONSTRUYENDO CONFIGURACION DE DESTINO SAP secureDestination 
+16:07:40 INFO ast.sap.connector.main.MainApp[48]: Conector SAP version 1.1.1902.1 
+16:08:01 INFO ast.sap.connector.main.MainApp[51]: Comando ejecutado: -j Z_PRUEBA_2 -c CREATE_MONITOR_JOB -t /AFIL/O_DATANET_S -i 11045400 
+16:08:01 INFO ast.sap.connector.main.MainApp[53]: Iniciando el componente conector sap 
+16:08:01 DEBUG ast.sap.connector.main.MainApp[54]: java.library.path-------------------------------------------------------------------------------------------------------------- 
+16:08:01 DEBUG ast.sap.connector.main.MainApp[56]: C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_151\jre\bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/lib/amd64;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Data Protection\Drivers\TSS\bin\;C:\Program Files\PostgreSQL\9.6\bin;C:\Program Files\PostgreSQL\9.6\lib;C:\WINDOWS\System32\OpenSSH\;C:\HashiCorp\Vagrant\bin;C:\Program Files\Java\jdk1.8.0_151\bin;C:\apache-maven-3.6.0\bin;C:\xampp\mysql\bin;C:\Users\Christian Gutierrez\AppData\Local\Microsoft\WindowsApps;C:\adb;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\bin\;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Christian Gutierrez\Desktop;;. 
+16:08:01 DEBUG ast.sap.connector.main.MainApp[57]: ------------------------------------------------------------------------------------------------------------------------------- 
+16:08:01 INFO ast.sap.connector.config.Configuration[37]: Cargando configuraciones desde C:\Users\Christian Gutierrez\Documents\services\sap-connector\connectorsap.properties 
+16:08:36 INFO ast.sap.connector.main.MainApp[101]: Encriptacion de passwords habilitada. 
+16:08:36 DEBUG ast.sap.connector.main.MainApp[120]: DATOS DE ENTRADA FINALES: 
+16:08:36 DEBUG ast.sap.connector.main.MainApp[121]: InputArgumentsData [user=mt14763809, password=****, host=10.233.0.131, clientNumber=401, systemNumber=00, jobName=Z_PRUEBA_2, jobId=11045400, command=CREATE_MONITOR_JOB, language=EN, execServer=null, eventId=null, singleStep=/AFIL/O_DATANET_S, singleVariant=null, variantKeyValuePairs=[]] 
+16:08:36 INFO ast.sap.connector.main.MainApp[129]: CONSTRUYENDO CONFIGURACION DE DESTINO SAP secureDestination 
+16:13:02 INFO ast.sap.connector.main.MainApp[48]: Conector SAP version 1.1.1902.1 
+16:13:07 INFO ast.sap.connector.main.MainApp[51]: Comando ejecutado: -j Z_PRUEBA_2 -c CREATE_MONITOR_JOB -t /AFIL/O_DATANET_S -i 11045400 -v FIL01 
+16:13:07 INFO ast.sap.connector.main.MainApp[53]: Iniciando el componente conector sap 
+16:13:07 DEBUG ast.sap.connector.main.MainApp[54]: java.library.path-------------------------------------------------------------------------------------------------------------- 
+16:13:07 DEBUG ast.sap.connector.main.MainApp[56]: C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_151\jre\bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/lib/amd64;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Data Protection\Drivers\TSS\bin\;C:\Program Files\PostgreSQL\9.6\bin;C:\Program Files\PostgreSQL\9.6\lib;C:\WINDOWS\System32\OpenSSH\;C:\HashiCorp\Vagrant\bin;C:\Program Files\Java\jdk1.8.0_151\bin;C:\apache-maven-3.6.0\bin;C:\xampp\mysql\bin;C:\Users\Christian Gutierrez\AppData\Local\Microsoft\WindowsApps;C:\adb;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\bin\;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Christian Gutierrez\Desktop;;. 
+16:13:07 DEBUG ast.sap.connector.main.MainApp[57]: ------------------------------------------------------------------------------------------------------------------------------- 
+16:13:07 INFO ast.sap.connector.config.Configuration[37]: Cargando configuraciones desde C:\Users\Christian Gutierrez\Documents\services\sap-connector\connectorsap.properties 
+16:14:09 INFO ast.sap.connector.main.MainApp[101]: Encriptacion de passwords habilitada. 
+16:14:09 DEBUG ast.sap.connector.main.MainApp[120]: DATOS DE ENTRADA FINALES: 
+16:14:09 DEBUG ast.sap.connector.main.MainApp[121]: InputArgumentsData [user=mt14763809, password=****, host=10.233.0.131, clientNumber=401, systemNumber=00, jobName=Z_PRUEBA_2, jobId=11045400, command=CREATE_MONITOR_JOB, language=EN, execServer=null, eventId=null, singleStep=/AFIL/O_DATANET_S, singleVariant=FIL01, variantKeyValuePairs=[]] 
+16:14:09 INFO ast.sap.connector.main.MainApp[129]: CONSTRUYENDO CONFIGURACION DE DESTINO SAP secureDestination 
+16:17:42 ERROR ast.sap.connector.main.MainApp[191]: Error fatal 
+ast.sap.connector.func.exception.ImportParameterSetErrorException: Ocurrio un error al establecer el valor del parametro de tipo IMPORT VARIANT de la funcion BAPI_XBP_VARINFO
+	at ast.sap.connector.func.SapFunction.setInParameter(SapFunction.java:56)
+	at ast.sap.connector.job.variant.VariantReader.readVariant(VariantReader.java:48)
+	at ast.sap.connector.job.variant.VariantChanger.changeVariant(VariantChanger.java:52)
+	at ast.sap.connector.cmd.VariantChangerHelper.changeVariant(VariantChangerHelper.java:41)
+	at ast.sap.connector.cmd.impl.CreateMonitorJobCommand.perform(CreateMonitorJobCommand.java:42)
+	at ast.sap.connector.cmd.SapXmiCommand.execute(SapXmiCommand.java:37)
+	at ast.sap.connector.main.MainApp.main(MainApp.java:141)
+Caused by: com.sap.conn.jco.JCoRuntimeException: Field VARIANT is not a member of INPUT
+	at com.sap.conn.jco.rt.AbstractMetaData.indexOf(AbstractMetaData.java:404)
+	at com.sap.conn.jco.rt.AbstractRecord.setValue(AbstractRecord.java:4330)
+	at ast.sap.connector.func.SapFunction.setInParameter(SapFunction.java:50)
+	... 6 common frames omitted
+16:17:43 DEBUG ast.sap.connector.main.MainApp[200]: OutputError: OutputError [code=255, trueCode=255, message=ast.sap.connector.func.exception.ImportParameterSetErrorException: Ocurrio un error al establecer el valor del parametro de tipo IMPORT VARIANT de la funcion BAPI_XBP_VARINFO] 
+16:20:53 INFO ast.sap.connector.main.MainApp[48]: Conector SAP version 1.1.1902.1 
+16:21:06 INFO ast.sap.connector.main.MainApp[51]: Comando ejecutado: -j Z_PRUEBA_2 -c CREATE_MONITOR_JOB -t /AFIL/O_DATANET_S -i 11045400 
+16:21:06 INFO ast.sap.connector.main.MainApp[53]: Iniciando el componente conector sap 
+16:21:06 DEBUG ast.sap.connector.main.MainApp[54]: java.library.path-------------------------------------------------------------------------------------------------------------- 
+16:21:06 DEBUG ast.sap.connector.main.MainApp[56]: C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_151\jre\bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_151/bin/../jre/lib/amd64;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Data Protection\Drivers\TSS\bin\;C:\Program Files\PostgreSQL\9.6\bin;C:\Program Files\PostgreSQL\9.6\lib;C:\WINDOWS\System32\OpenSSH\;C:\HashiCorp\Vagrant\bin;C:\Program Files\Java\jdk1.8.0_151\bin;C:\apache-maven-3.6.0\bin;C:\xampp\mysql\bin;C:\Users\Christian Gutierrez\AppData\Local\Microsoft\WindowsApps;C:\adb;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\bin\;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Christian Gutierrez\Desktop;;. 
+16:21:06 DEBUG ast.sap.connector.main.MainApp[57]: ------------------------------------------------------------------------------------------------------------------------------- 
+16:21:06 INFO ast.sap.connector.config.Configuration[37]: Cargando configuraciones desde C:\Users\Christian Gutierrez\Documents\services\sap-connector\connectorsap.properties 
+16:21:06 INFO ast.sap.connector.main.MainApp[101]: Encriptacion de passwords habilitada. 
+16:21:06 DEBUG ast.sap.connector.main.MainApp[120]: DATOS DE ENTRADA FINALES: 
+16:21:06 DEBUG ast.sap.connector.main.MainApp[121]: InputArgumentsData [user=mt14763809, password=****, host=10.233.0.131, clientNumber=401, systemNumber=00, jobName=Z_PRUEBA_2, jobId=11045400, command=CREATE_MONITOR_JOB, language=EN, execServer=null, eventId=null, singleStep=/AFIL/O_DATANET_S, singleVariant=null, variantKeyValuePairs=[]] 
+16:21:06 INFO ast.sap.connector.main.MainApp[129]: CONSTRUYENDO CONFIGURACION DE DESTINO SAP secureDestination 

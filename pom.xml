@@ -1,0 +1,199 @@
+	<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ast.sap</groupId>
+    <artifactId>sap-connector</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+
+    <name>sap-connector</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.7</java.version>
+        <jco.version>3.0.16</jco.version>
+
+        <lib.dir>sapConnector_lib</lib.dir>
+        <build.lib.dir>${project.build.directory}/${lib.dir}</build.lib.dir>
+        <sapjco3.windows.dir>${project.basedir}/lib/windows/x64</sapjco3.windows.dir>
+        <sapjco3.linux.dir>${project.basedir}/lib/linuxSuse11</sapjco3.linux.dir>
+
+        <!-- Determina el JAR a usar para comunicarse con SAP mediante jco -->
+        <sapjco3.jar.file>${sapjco3.windows.dir}/sapjco3.jar</sapjco3.jar.file>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.6.1</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+
+                <!-- CONFIGURO LA GENERACION DEL MANIFEST PARA QUE AGREGUE ENTRADAS DE CLASSPATH
+                 APUNTANDO A sapConnector_lib/XXXX  PARA CADA DEPENDENCIA.
+                  AGREGO UNA ENTRADA MANUAL sapConnector_lib/sapjco3.jar QUE ES LA DEPEDNENCIA DE
+                  SISTEMA DE JCO (ESTO SE HACE XQ EL JAR NO PUEDE RENOMBRARSE SIGUIENDO LAS CONVENCIONES DE MAVEN)-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <finalName>sapConnector</finalName>
+                        <archive>
+                            <manifest>
+                                <mainClass>ast.sap.connector.main.MainApp</mainClass>
+                                <addClasspath>true</addClasspath>
+                                <classpathPrefix>${lib.dir}/</classpathPrefix>
+                            </manifest>
+                            <manifestEntries>
+                                <Class-Path>${lib.dir}/sapjco3.jar</Class-Path>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+                </plugin>
+
+                <!-- COPIO LAS DEPENDENCIAS AL DIRECTORIO target/sapConnector_lib/ -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.0.2</version>
+                    <executions>
+                        <execution>
+                            <id>copy all dependencies</id>
+                            <phase>install</phase>
+                            <goals>
+                                <goal>copy-dependencies</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>${build.lib.dir}</outputDirectory>
+                                <includeScope>runtime</includeScope>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <!-- CORRO TAREAS DE ANT NECESARIAS PARA ARMAR EL ENTREGABLE:
+                 * COPIO LAS BIBLIOTECAS NATIVAS DE WINDOWS Y LINUX A target/
+                 * COPIO EL JAR sapjco3.jar A target/sapConnector_lib/
+                 * COPIO EL ARCHIVO DE PROPERTIES A target/
+                 * COPIO EL ARCHIVO DE LOGBACK A target/ -->
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.8</version>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <configuration>
+                                <tasks>
+                                    <copy file="${sapjco3.jar.file}" todir="${build.lib.dir}"/>
+                                    <copy file="${sapjco3.windows.dir}/sapjco3.dll" todir="${project.build.directory}"/>
+                                    <copy file="${sapjco3.linux.dir}/sapjco3" todir="${project.build.directory}"/>
+                                    <copy file="${project.basedir}/connectorsap.properties" todir="${project.build.directory}"/>
+                                    <copy file="${project.basedir}/src/main/resources/logback.xml" todir="${project.build.directory}"/>
+                                </tasks>
+                            </configuration>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+    </build>
+
+
+    <dependencies>
+
+        <!-- DADO QUE LA BIBLIOTECA DE JCO NO PUEDE RENOMBRARSE SEGUN LOS ESTANDARES DE MAVEN, LA MISMA DEBE USARSE
+         COMO DEPEDENCIA DE SISTEMA-->
+        <dependency>
+            <scope>system</scope>
+            <systemPath>${sapjco3.jar.file}</systemPath>
+            <groupId>com.sap.conn.jco</groupId>
+            <artifactId>sapjco3</artifactId>
+            <version>${jco.version}</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!-- The org.codehaus.janino:commons-compiler:3.0.6 dependency -->
+        <!-- will be automatically pulled in by Maven's transitivity rules -->
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>janino</artifactId>
+            <version>3.0.6</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/args4j/args4j -->
+        <dependency>
+            <groupId>args4j</groupId>
+            <artifactId>args4j</artifactId>
+            <version>2.33</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.8.47</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+</project>

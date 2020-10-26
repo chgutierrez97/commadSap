@@ -1,0 +1,36 @@
+18:13:24 INFO ast.sap.connector.chain.monitor.ChainMonitor[84]: Monitoreando la cadena Z_CHAIN_S_EVENT - 123456 
+18:13:24 INFO ast.sap.connector.chain.monitor.ChainMonitor[94]: Estado de la ejecucion de la cadena G - Successfully completed  
+18:13:24 INFO ast.sap.connector.chain.monitor.ChainMonitor[100]: Cantidad total de procesos de la cadena Z_CHAIN_S_EVENT - 2 
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[84]: Monitoreando la cadena Z_CHAIN_S_EVENT - 123456 
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[94]: Estado de la ejecucion de la cadena G - Successfully completed  
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[100]: Cantidad total de procesos de la cadena Z_CHAIN_S_EVENT - 7 
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[84]: Monitoreando la cadena Z_CHAIN_S_EVENT - 123456 
+18:13:25 ERROR ast.sap.connector.chain.monitor.ChainMonitor[168]: Error al obtener el status de la cadena Z_CHAIN_S_EVENT, en su ejecucion 123456 
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[169]: Intentando recuperar conexion con sap 
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[203]: Conexion con server sap reestablecida! 
+18:13:25 ERROR ast.sap.connector.chain.monitor.ChainMonitor[168]: Error al obtener el status de la cadena Z_CHAIN_S_EVENT, en su ejecucion 123456 
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[169]: Intentando recuperar conexion con sap 
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[203]: Conexion con server sap reestablecida! 
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[94]: Estado de la ejecucion de la cadena G - Successfully completed  
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[100]: Cantidad total de procesos de la cadena Z_CHAIN_S_EVENT - 2 
+18:13:25 INFO ast.sap.connector.chain.monitor.ChainMonitor[84]: Monitoreando la cadena SOME_CHAIN - 1234567890 
+18:13:26 INFO ast.sap.connector.chain.monitor.ChainMonitor[94]: Estado de la ejecucion de la cadena G - Successfully completed  
+18:13:26 INFO ast.sap.connector.chain.monitor.ChainMonitor[100]: Cantidad total de procesos de la cadena SOME_CHAIN - 2 
+18:13:26 INFO ast.sap.connector.config.Configuration[37]: Cargando configuraciones desde C:\Users\Christian Gutierrez\Documents\services\sap-connector\Nonexistent 
+18:13:26 WARN ast.sap.connector.config.Configuration[41]: No se pudo cargar el archivo C:\Users\Christian Gutierrez\Documents\services\sap-connector\Nonexistent. Se utilizarán las configuraciones por defecto. 
+18:13:26 INFO ast.sap.connector.config.Configuration[37]: Cargando configuraciones desde C:\Users\Christian Gutierrez\Documents\services\sap-connector\connectorsap.properties 
+18:13:26 ERROR ast.sap.connector.job.track.JobMonitor[183]: Error al obtener el estado del job MY_JOB:123456 
+18:13:26 INFO ast.sap.connector.job.track.JobMonitor[184]: Intentando recuperar conexion con sap 
+18:13:26 INFO ast.sap.connector.job.track.JobMonitor[220]: Conexion con server sap reestablecida! 
+18:13:26 ERROR ast.sap.connector.job.track.JobMonitor[183]: Error al obtener el estado del job MY_JOB:123456 
+18:13:26 INFO ast.sap.connector.job.track.JobMonitor[184]: Intentando recuperar conexion con sap 
+18:13:26 INFO ast.sap.connector.job.track.JobMonitor[220]: Conexion con server sap reestablecida! 
+18:13:26 ERROR ast.sap.connector.job.track.JobMonitor[183]: Error al obtener el log del job 
+18:13:26 INFO ast.sap.connector.job.track.JobMonitor[184]: Intentando recuperar conexion con sap 
+18:13:26 INFO ast.sap.connector.job.track.JobMonitor[220]: Conexion con server sap reestablecida! 
+18:13:26 ERROR ast.sap.connector.job.track.JobStatusCode[64]: Estado de job invalido o desconocido:  
+18:13:26 ERROR ast.sap.connector.job.track.JobStatusCode[64]: Estado de job invalido o desconocido: INVALID 
+18:13:26 INFO ast.sap.connector.config.Configuration[37]: Cargando configuraciones desde C:\Users\Christian Gutierrez\Documents\services\sap-connector\connectorsap_test.properties 
+18:13:26 ERROR ast.sap.connector.main.args.InputArgumentsParser[207]: El comando NONEXISTENT_COMMAND no existe 
+18:13:26 INFO ast.sap.connector.main.OutputParser[41]: La cadena NO finalizo correctamente... 
+18:13:26 INFO ast.sap.connector.main.OutputParser[47]: No hay procesos con error en la cadena! 
